@@ -3,356 +3,422 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>网站导航 - 高效资源集合</title>
-    <meta name="description" content="一站式网站导航，帮助您快速找到需要的工具和资源">
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>SEO工具导航网站</title>
+    <meta name="description" content="SEO工具导航网站，收集了各类专业SEO工具、关键词研究、域名查询、搜索引擎优化资源">
+    <meta name="keywords" content="SEO工具,搜索引擎优化,关键词研究,域名查询,网站优化">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'clay': {
+                            50: '#faf6f1',
+                            100: '#f2ebe0',
+                            200: '#e6d8c4',
+                            300: '#d8c2a5',
+                            400: '#c7a87e',
+                            500: '#bb9766',
+                            600: '#ad8652',
+                            700: '#8f6b43',
+                            800: '#76583a',
+                            900: '#624a33',
+                            950: '#342517',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <h1>网站导航</h1>
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="搜索网站...">
-                <button type="button"><i class="fas fa-search"></i></button>
+<body class="bg-clay-50 min-h-screen">
+    <header class="bg-clay-800 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <h1 class="text-3xl font-bold text-center md:text-left mb-4 md:mb-0">SEO工具导航网站</h1>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="搜索工具或资源..." class="w-64 py-2 px-4 rounded-full text-gray-700 focus:outline-none">
+                        <button class="absolute right-0 top-0 mt-2 mr-3 text-clay-600">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
+            <p class="text-center mt-2">专业的搜索引擎优化工具及资源汇总</p>
+            
+            <!-- 导航条 -->
+            <nav class="mt-4">
+                <ul class="flex flex-wrap justify-center space-x-1 md:space-x-4">
+                    <li><a href="#keywords" class="px-3 py-1 bg-clay-700 hover:bg-clay-600 rounded-full text-sm md:text-base transition-colors">关键词工具</a></li>
+                    <li><a href="#domains" class="px-3 py-1 bg-clay-700 hover:bg-clay-600 rounded-full text-sm md:text-base transition-colors">域名查询</a></li>
+                    <li><a href="#research" class="px-3 py-1 bg-clay-700 hover:bg-clay-600 rounded-full text-sm md:text-base transition-colors">实战调研</a></li>
+                    <li><a href="#templates" class="px-3 py-1 bg-clay-700 hover:bg-clay-600 rounded-full text-sm md:text-base transition-colors">上游模板</a></li>
+                    <li><a href="#resources" class="px-3 py-1 bg-clay-700 hover:bg-clay-600 rounded-full text-sm md:text-base transition-colors">更多资源</a></li>
+                    <li><a href="#trending" class="px-3 py-1 bg-clay-700 hover:bg-clay-600 rounded-full text-sm md:text-base transition-colors">流行资讯</a></li>
+                    <li><a href="#articles" class="px-3 py-1 bg-clay-700 hover:bg-clay-600 rounded-full text-sm md:text-base transition-colors">文章推荐</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <main class="container">
-        <!-- 1. 常见仿制关键词调研网站 -->
-        <section class="card nav-section">
-            <h2>常见仿制关键词调研网站</h2>
-            <div class="link-grid">
-                <a href="https://www.searchsuggest.top/?keywords=" class="link-card" target="_blank">
-                    <div class="link-title">谷歌下拉词</div>
-                </a>
-                <a href="https://app.neilpfy.io/ASO-Tools-overview" class="link-card" target="_blank">
-                    <div class="link-title">Neilpfy 应用</div>
-                </a>
-                <a href="https://theresanaiforthat.com/requests" class="link-card" target="_blank">
-                    <div class="link-title">AI 写真功能求教机</div>
-                </a>
-                <a href="https://www.com.keyword-difficulty" class="link-card" target="_blank">
-                    <div class="link-title">关键词难度</div>
-                </a>
+    <main class="container mx-auto px-4 py-8">
+        <!-- 关键词和关键词调研工具 -->
+        <section id="keywords" class="mb-10 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <h2 class="text-2xl font-bold mb-4 text-clay-800 border-b border-clay-200 pb-2">1. 关键词和关键词调研工具</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto">
+                    <thead>
+                        <tr class="bg-clay-100">
+                            <th class="px-4 py-2 text-left">名称</th>
+                            <th class="px-4 py-2 text-left">链接</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">谷歌关键词</td>
+                            <td class="px-4 py-3"><a href="https://www.searchsuggest.tips/?keywords=" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://www.searchsuggest.tips/?keywords=</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">Toofr 邮箱</td>
+                            <td class="px-4 py-3"><a href="https://www.toofr.ai/tools/resume" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://www.toofr.ai/tools/resume</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">AI 写真功能求教真</td>
+                            <td class="px-4 py-3"><a href="https://theresaforfutat.com/requests" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://theresaforfutat.com/requests</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">关键词难度</td>
+                            <td class="px-4 py-3"><a href="https://www.experte.com/keyword-difficulty" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://www.experte.com/keyword-difficulty</a></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
-        <!-- 2. 上位必备 -->
-        <section class="card nav-section">
-            <h2>上位必备</h2>
-            <div class="link-category">
-                <h3>域名查询</h3>
-                <div class="link-grid">
-                    <a href="https://pandoma-research.com/" class="link-card" target="_blank">
-                        <div class="link-title">pandoma-research.com</div>
-                    </a>
-                    <a href="https://query.domains/" class="link-card" target="_blank">
-                        <div class="link-title">query.domains</div>
-                    </a>
-                    <a href="https://instantdomainsearch.com/?" class="link-card" target="_blank">
-                        <div class="link-title">instantdomainsearch.com</div>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="link-category">
-                <h3>域名注册</h3>
-                <div class="link-grid">
-                    <a href="https://spaceship.com" class="link-card" target="_blank">
-                        <div class="link-title">spaceship.com</div>
-                    </a>
-                    <a href="https://porkbun.com" class="link-card" target="_blank">
-                        <div class="link-title">porkbun.com</div>
-                    </a>
-                    <a href="https://namecheap.com" class="link-card" target="_blank">
-                        <div class="link-title">namecheap.com</div>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="link-category">
-                <h3>代码域名托管</h3>
-                <div class="link-grid">
-                    <a href="https://github.com" class="link-card" target="_blank">
-                        <div class="link-title">github.com</div>
-                    </a>
-                    <a href="https://cloudflare.com" class="link-card" target="_blank">
-                        <div class="link-title">cloudflare.com</div>
-                    </a>
-                    <a href="https://vercel.com" class="link-card" target="_blank">
-                        <div class="link-title">vercel.com</div>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="link-category">
-                <h3>数据后台</h3>
-                <div class="link-grid">
-                    <a href="https://search.google.com/search-console" class="link-card" target="_blank">
-                        <div class="link-title">search.google.com/search-console</div>
-                    </a>
-                    <a href="https://analytics.google.com/analytics/web" class="link-card" target="_blank">
-                        <div class="link-title">analytics.google.com/analytics/web</div>
-                    </a>
-                    <a href="https://www.bing.com/webmasters/submitur" class="link-card" target="_blank">
-                        <div class="link-title">bing.com/webmasters/submitur</div>
-                    </a>
-                </div>
+        <!-- 域名查询 -->
+        <section id="domains" class="mb-10 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <h2 class="text-2xl font-bold mb-4 text-clay-800 border-b border-clay-200 pb-2">2. 域名查询</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto">
+                    <thead>
+                        <tr class="bg-clay-100">
+                            <th class="px-4 py-2 text-left">类别</th>
+                            <th class="px-4 py-2 text-left" colspan="3">链接</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">域名查询</td>
+                            <td class="px-4 py-3"><a href="https://pandoma-research.com" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://pandoma-research.com</a></td>
+                            <td class="px-4 py-3"><a href="https://query.domains/" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://query.domains/</a></td>
+                            <td class="px-4 py-3"><a href="https://instantdomainsearch.com/?" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://instantdomainsearch.com/?</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">域名注册</td>
+                            <td class="px-4 py-3"><a href="https://spaceship.com" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">spaceship.com</a></td>
+                            <td class="px-4 py-3"><a href="https://porkbun.com" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">porkbun.com</a></td>
+                            <td class="px-4 py-3"><a href="https://namecheap.com" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">namecheap.com</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">代码和网页托管</td>
+                            <td class="px-4 py-3"><a href="https://github.com" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">github.com</a></td>
+                            <td class="px-4 py-3"><a href="https://cloudflare.com" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">cloudflare.com</a></td>
+                            <td class="px-4 py-3"><a href="https://vercel.com" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">vercel.com</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">数据统计</td>
+                            <td class="px-4 py-3"><a href="https://search.google.com/search-console" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://search.google.com/search-console</a></td>
+                            <td class="px-4 py-3"><a href="https://analytics.google.com/analytics/web" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://analytics.google.com/analytics/web</a></td>
+                            <td class="px-4 py-3"><a href="https://www.bing.com/webmasters/submiturl" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://www.bing.com/webmasters/submiturl</a></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
-        <!-- 3. 竞品调研 -->
-        <section class="card nav-section">
-            <h2>竞品调研</h2>
-            <div class="link-grid">
-                <a href="https://pridr.com" class="link-card" target="_blank">
-                    <div class="link-title">查看竞品网页渠道词</div>
-                </a>
-                <a href="https://ahrefs.com/free-seo-tools" class="link-card" target="_blank">
-                    <div class="link-title">查看对赋</div>
-                </a>
-                <a href="https://semrush.com" class="link-card" target="_blank">
-                    <div class="link-title">查看网站渠道词</div>
-                </a>
+        <!-- 实战调研 -->
+        <section id="research" class="mb-10 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <h2 class="text-2xl font-bold mb-4 text-clay-800 border-b border-clay-200 pb-2">3. 实战调研</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto">
+                    <thead>
+                        <tr class="bg-clay-100">
+                            <th class="px-4 py-2 text-left">名称</th>
+                            <th class="px-4 py-2 text-left">链接</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">百度流量和网页变更词</td>
+                            <td class="px-4 py-3"><a href="https://ahrefs.com" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">ahrefs.com</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">百度内部词</td>
+                            <td class="px-4 py-3"><a href="https://ahrefs.com/free-seo-tools" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://ahrefs.com/free-seo-tools</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">百度网站变更词</td>
+                            <td class="px-4 py-3"><a href="https://semrush.com" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">semrush.com</a></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
-        <!-- 4. 上游模板 -->
-        <section class="card nav-section">
-            <h2>上游模板</h2>
-            <div class="link-grid">
-                <a href="https://github.com/openByte/Bin" class="link-card" target="_blank">
-                    <div class="link-title">github.com/openByte/Bin</div>
-                </a>
-                <a href="https://github.com/hartz/Next-js-Boilerplate" class="link-card" target="_blank">
-                    <div class="link-title">github.com/hartz/Next-js-Boilerplate</div>
-                </a>
-                <a href="https://github.com/hartz/SaaS-Boilerplate" class="link-card" target="_blank">
-                    <div class="link-title">github.com/hartz/SaaS-Boilerplate</div>
-                </a>
-                <a href="https://github.com/hartz/Next-JS-Landing-Page-Starter-Template" class="link-card" target="_blank">
-                    <div class="link-title">github.com/hartz/Next-JS-Landing-Page-Starter-Template</div>
-                </a>
-                <a href="https://github.com/hartz/Astro-boilerplate" class="link-card" target="_blank">
-                    <div class="link-title">github.com/hartz/Astro-boilerplate</div>
-                </a>
-                <a href="https://github.com/weijunext/landing-page-boilerplate" class="link-card" target="_blank">
-                    <div class="link-title">github.com/weijunext/landing-page-boilerplate</div>
-                </a>
-                <a href="https://github.com/ai-app-studio/Yiggle-Ai-WebUI" class="link-card" target="_blank">
-                    <div class="link-title">github.com/ai-app-studio/Yiggle-Ai-WebUI</div>
-                </a>
-                <a href="https://github.com/weijunext/new-blog" class="link-card" target="_blank">
-                    <div class="link-title">github.com/weijunext/new-blog</div>
-                </a>
-                <a href="https://github.com/weijunext/saph-money" class="link-card" target="_blank">
-                    <div class="link-title">github.com/weijunext/saph-money</div>
-                </a>
-                <a href="https://github.com/damilola/thumbscreens" class="link-card" target="_blank">
-                    <div class="link-title">github.com/damilola/thumbscreens</div>
-                </a>
-                <a href="https://github.com/weijunext/smart-excel-ai" class="link-card" target="_blank">
-                    <div class="link-title">github.com/weijunext/smart-excel-ai</div>
-                </a>
-                <a href="https://github.com/ophenrydiallol/nextjs_vps" class="link-card" target="_blank">
-                    <div class="link-title">github.com/ophenrydiallol/nextjs_vps</div>
-                </a>
-                <a href="https://github.com/Pantos/change-hairstyle-ai" class="link-card" target="_blank">
-                    <div class="link-title">github.com/Pantos/change-hairstyle-ai</div>
-                </a>
-                <a href="https://github.com/replicate/react-scripts-retool" class="link-card" target="_blank">
-                    <div class="link-title">github.com/replicate/react-scripts-retool</div>
-                </a>
-                <a href="https://github.com/swag-lang/open-saas" class="link-card" target="_blank">
-                    <div class="link-title">github.com/swag-lang/open-saas</div>
-                </a>
-                <a href="https://github.com/ooici/pucaai" class="link-card" target="_blank">
-                    <div class="link-title">github.com/ooici/pucaai</div>
-                </a>
-                <a href="https://github.com/haashfly/saashfly" class="link-card" target="_blank">
-                    <div class="link-title">github.com/haashfly/saashfly</div>
-                </a>
-                <a href="https://github.com/mundane9996/sikke-web" class="link-card" target="_blank">
-                    <div class="link-title">github.com/mundane9996/sikke-web</div>
-                </a>
-                <a href="https://github.com/fre123-com/fre123-nav" class="link-card" target="_blank">
-                    <div class="link-title">github.com/fre123-com/fre123-nav</div>
-                </a>
-                <a href="https://github.com/dulenc/oss-gallery?id=ossigallery" class="link-card" target="_blank">
-                    <div class="link-title">github.com/dulenc/oss-gallery?id=ossigallery</div>
-                </a>
-                <a href="https://github.com/WebStackPage/WebStackPage.github.io" class="link-card" target="_blank">
-                    <div class="link-title">github.com/WebStackPage/WebStackPage.github.io</div>
-                </a>
-                <a href="https://github.com/6677-ag/sapt-ai-webapp" class="link-card" target="_blank">
-                    <div class="link-title">github.com/6677-ag/sapt-ai-webapp</div>
-                </a>
-                <a href="https://github.com/ai-in-app/apps-works" class="link-card" target="_blank">
-                    <div class="link-title">github.com/ai-in-app/apps-works</div>
-                </a>
-                <a href="https://github.com/dlalanjali/ai-list" class="link-card" target="_blank">
-                    <div class="link-title">github.com/dlalanjali/ai-list</div>
-                </a>
-                <a href="https://github.com/DopleyAI/dopeyi-data" class="link-card" target="_blank">
-                    <div class="link-title">github.com/DopleyAI/dopeyi-data</div>
-                </a>
-                <a href="https://vercel.com/templates" class="link-card" target="_blank">
-                    <div class="link-title">vercel.com/templates</div>
-                </a>
+        <!-- 上游模板 -->
+        <section id="templates" class="mb-10 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <h2 class="text-2xl font-bold mb-4 text-clay-800 border-b border-clay-200 pb-2">4. 上游模板</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/openflyin/lin" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/openflyin/lin</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/hartz/Next-js-Boilerplate" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/hartz/Next-js-Boilerplate</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/hartz/SaaS-Boilerplate" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/hartz/SaaS-Boilerplate</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/hartz/Next-JS-Landing-Page-Starter-Template" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/hartz/Next-JS-Landing-Page-Starter-Template</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/hartz/Astro-boilerplate" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/hartz/Astro-boilerplate</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/weijiames/landing-page-boilerplate" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/weijiames/landing-page-boilerplate</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/ai-agz-studio/Viggle-AI-WebUI" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/ai-agz-studio/Viggle-AI-WebUI</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/weijiames/new-blog" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/weijiames/new-blog</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/weijiames/gash-money" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/weijiames/gash-money</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/dlamka/huntscreens" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/dlamka/huntscreens</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/weijiames/smart-excel-ai" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/weijiames/smart-excel-ai</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/ashleyrudland/nextjs_vpn" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/ashleyrudland/nextjs_vpn</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/Pantsu/change-hairstyle-ai" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/Pantsu/change-hairstyle-ai</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/replit-early/grant-scripts-creator" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/replit-early/grant-scripts-creator</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/wasp-lang/open-saas" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/wasp-lang/open-saas</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/onlij/jumpsite" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/onlij/jumpsite</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/wasp/wasp.fly" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/wasp/wasp.fly</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/mundane79969/sikke-web" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/mundane79969/sikke-web</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 font-medium mt-4 text-clay-700">马上还在更新...</div>
             </div>
         </section>
 
-        <!-- 5. 营销方向 -->
-        <section class="card nav-section">
-            <h2>营销方向</h2>
-            <div class="link-category">
-                <h3>Reddit 子社区</h3>
-                <div class="link-grid">
-                    <a href="https://liberating-doll-biba.notion.site/Reddit-1de8aed915180218396ecab576e53db" class="link-card" target="_blank">
-                        <div class="link-title">liberating-doll-biba.notion.site/Reddit-1de8aed915180218396ecab576e53db</div>
-                    </a>
+        <!-- 更多模板资源 -->
+        <section id="resources" class="mb-10 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <h2 class="text-2xl font-bold mb-4 text-clay-800 border-b border-clay-200 pb-2">5. 更多模板资源</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/fre123.com/fre123-nav/" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/fre123.com/fre123-nav/</a>
                 </div>
-            </div>
-            
-            <div class="link-category">
-                <h3>谷歌专业中心SEO 显性知识</h3>
-                <div class="link-grid">
-                    <a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content/how-cn" class="link-card" target="_blank">
-                        <div class="link-title">developers.google.com/search/docs/fundamentals/creating-helpful-content/how-cn</div>
-                    </a>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/Dubhe/ios-gallery?tab=os-gallery" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/Dubhe/ios-gallery?tab=os-gallery</a>
                 </div>
-            </div>
-            
-            <div class="link-category">
-                <h3>Top Trending Webstashcom Alerts AI VISUSAAS TOOL</h3>
-                <div class="link-grid">
-                    <a href="https://drive.com/webstash/trending" class="link-card" target="_blank">
-                        <div class="link-title">drive.com/webstash/trending</div>
-                    </a>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/WebStackPage/WebStackPage.github.io" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/WebStackPage/WebStackPage.github.io</a>
                 </div>
-            </div>
-            
-            <div class="link-category">
-                <h3>Starter</h3>
-                <div class="link-grid">
-                    <a href="https://docs.google.com/spreadsheets/d/1eo04DBURLRi1K2/1EC3M/UZTGM1"ngLONgAo)" class="link-card" target="_blank">
-                        <div class="link-title">docs.google.com/spreadsheets/d/1eo04DBURLRi1K2/1EC3M/UZTGM1"ngLONgAo)</div>
-                    </a>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/6677-ag?tab=ai-webui" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/6677-ag?tab=ai-webui</a>
                 </div>
-            </div>
-            
-            <div class="link-category">
-                <h3>Story Premiumsubspremer Report 2023</h3>
-                <div class="link-grid">
-                    <a href="https://docs.google.com/spreadsheets/d/1e1m04DBURLRi1JVWFr8_91NA/Ir6hT8e451101Ige/431151/01" class="link-card" target="_blank">
-                        <div class="link-title">docs.google.com/spreadsheets/d/1e1m04DBURLRi1JVWFr8_91NA/Ir6hT8e451101Ige/431151/01</div>
-                    </a>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/dll-in-ex/gpts-works" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/dll-in-ex/gpts-works</a>
                 </div>
-            </div>
-            
-            <div class="link-category">
-                <h3>These making $500Month on side projects in 20xk</h3>
-                <div class="link-grid">
-                    <a href="https://www.500mnr.com/" class="link-card" target="_blank">
-                        <div class="link-title">www.500mnr.com</div>
-                    </a>
-                    <a href="https://www.seomonitor.com/hsm?id=3237343" class="link-card" target="_blank">
-                        <div class="link-title">www.seomonitor.com/hsm?id=3237343</div>
-                    </a>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/6liulai/ui-lib" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/6liulai/ui-lib</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://github.com/DokeyAI/dokey-data" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://github.com/DokeyAI/dokey-data</a>
+                </div>
+                <div class="border border-clay-200 rounded-lg p-3 hover:bg-clay-50 transition-colors">
+                    <a href="https://vercel.com/templates" class="block text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://vercel.com/templates</a>
                 </div>
             </div>
         </section>
 
-        <!-- 6. 工具推特 -->
-        <section class="card nav-section">
-            <h2>工具推特</h2>
-            <div class="link-grid">
-                <a href="https://csys.com/articleDetail/ag.topjs/1!5814!4849!44482" class="link-card" target="_blank">
-                    <div class="link-title">
-                        <div class="tweet-date">2024/1/1</div>
-                        <div class="tweet-title">企业微信抄了 AI 助手方开发者</div>
-                    </div>
-                </a>
-                <a href="https://csys.com/articleDetail/ag.topjs/2!84!51!52!49!25!52" class="link-card" target="_blank">
-                    <div class="link-title">
-                        <div class="tweet-date">2023-02-05</div>
-                        <div class="tweet-title">AI 团队的最佳 Build about，nodejs App</div>
-                    </div>
-                </a>
-                <a href="https://csys.com/articleDetail/ag.topjs/4!84!51!15!4!58!14!18" class="link-card" target="_blank">
-                    <div class="link-title">
-                        <div class="tweet-date">2024-11-13</div>
-                        <div class="tweet-title">如果想让自搜被谷歌快的代化爬取 / 翻译 / 生成文件</div>
-                    </div>
-                </a>
-                <a href="https://csys.com/articleDetail/ag.topjs/5!21!54!82?!81!54!14" class="link-card" target="_blank">
-                    <div class="link-title">
-                        <div class="tweet-date">2024-07-23</div>
-                        <div class="tweet-title">发布的订单特征...</div>
-                    </div>
-                </a>
-                <a href="https://csys.com/articleDetail/ag.topjs/1!88!54!51!24!48!51!42" class="link-card" target="_blank">
-                    <div class="link-title">
-                        <div class="tweet-date">2023-08-20</div>
-                        <div class="tweet-title">用 AI 打中枪在开发超过但机构落了？再出我们打个比方：你丁做产品号？7 个...</div>
-                    </div>
-                </a>
-                <a href="https://csys.com/articleDetail/ag.topjs/8!14!32!28!44!51!2" class="link-card" target="_blank">
-                    <div class="link-title">
-                        <div class="tweet-date">2023-12-07</div>
-                        <div class="tweet-title">什么产品号最？-...</div>
-                    </div>
-                </a>
-                <a href="https://csys.com/articleDetail/ag.topjs/8!14!82!45!54!88!22" class="link-card" target="_blank">
-                    <div class="link-title">
-                        <div class="tweet-date">2023-02-09</div>
-                        <div class="tweet-title">写给想立项发育：如何开始租用户</div>
-                    </div>
-                </a>
-                <a href="https://csys.com/articleDetail/ag.topjs/2!12!48!24!12!45!21" class="link-card" target="_blank">
-                    <div class="link-title">
-                        <div class="tweet-date">2022-11-10</div>
-                        <div class="tweet-title">点 MVP 开发什么产品 idea</div>
-                    </div>
-                </a>
-                <a href="https://csys.com/articleDetail/ag.topjs/4!15!41!82!55!21!58" class="link-card" target="_blank">
-                    <div class="link-title">
-                        <div class="tweet-date">2022-05-11</div>
-                        <div class="tweet-title">完美的副业项目，应该怎么做出来？</div>
-                    </div>
-                </a>
-                <a href="https://csys.com/articleDetail/ag.topjs/1!84!21!45!55!22!81!2" class="link-card" target="_blank">
-                    <div class="link-title">
-                        <div class="tweet-date">2022-04-25</div>
-                        <div class="tweet-title">剖断项目开发好的指标方法</div>
-                    </div>
-                </a>
-                <a href="https://csys.com/articleDetail/ag.topjs/2!18!14!24!45!32!1" class="link-card" target="_blank">
-                    <div class="link-title">
-                        <div class="tweet-date">2021-09-10</div>
-                        <div class="tweet-title">2021 年 Google SEO 最全重要的技巧！关闭</div>
-                    </div>
-                </a>
-                <a href="https://csys.com/articleDetail/ag.topjs/1!82!88!85!14!25!18!2" class="link-card" target="_blank">
-                    <div class="link-title">
-                        <div class="tweet-date">2021-06-21</div>
-                        <div class="tweet-title">0 流量，如何不，只 UI 设计？用？ B 2B UI 设计的评测，享受技术的完服务的秘笈</div>
-                    </div>
-                </a>
+        <!-- 流行资讯 -->
+        <section id="trending" class="mb-10 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <h2 class="text-2xl font-bold mb-4 text-clay-800 border-b border-clay-200 pb-2">6. 流行资讯</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto">
+                    <thead>
+                        <tr class="bg-clay-100">
+                            <th class="px-4 py-2 text-left">平台</th>
+                            <th class="px-4 py-2 text-left">链接</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">Reddit 子门区</td>
+                            <td class="px-4 py-3"><a href="https://liberating-doll-biba.notion.site/Reddit-1abdeae919e8018d39ecb5b676433b0b" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://liberating-doll-biba.notion.site/Reddit-1abdeae919e8018d39ecb5b676433b0b</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">谷歌等发布的SEO 基础知识</td>
+                            <td class="px-4 py-3"><a href="https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=zh-cn" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://developers.google.com/search/docs/fundamentals/creating-helpful-content?hl=zh-cn</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">Top Trending Websites+Ahrefs</td>
+                            <td class="px-4 py-3"><a href="https://ahrefs.com/website/trending" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://ahrefs.com/website/trending</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">Starter</td>
+                            <td class="px-4 py-3"><a href="https://docs.google.com/spreadsheets/d/1e1nO4tKFhu0l7tGrOzPV3ECMj6XY5nf9o3MiCBnujDx8/edit?resourcekey=0-tEMdJeMTKFl70kgOYTVWfQ#gid=0" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://docs.google.com/spreadsheets/d/1e1nO4tKFhu0l7tGrOzPV3ECMj6XY5nf9o3MiCBnujDx8/edit</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">Story Premium/Enterprise Report-by</td>
+                            <td class="px-4 py-3"><a href="https://docs.google.com/spreadsheets/d/1e1nO4tKFhu0l7tGrOzPV3ECMj6XY5nf9o3MiCBnujDx8/edit#gid=431151006" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://docs.google.com/spreadsheets/d/1e1nO4tKFhu0l7tGrOzPV3ECMj6XY5nf9o3MiCBnujDx8/edit#gid=431151006</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">These-making</td>
+                            <td class="px-4 py-3"><a href="https://www.500mom.com/" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://www.500mom.com/</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">500Mom on side projects in 20xx</td>
+                            <td class="px-4 py-3"><a href="https://www.ecommerce-nation.com/them?id=4273343" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://www.ecommerce-nation.com/them?id=4273343</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 文章推荐 -->
+        <section id="articles" class="mb-10 bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <h2 class="text-2xl font-bold mb-4 text-clay-800 border-b border-clay-200 pb-2">7. 文章推荐</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto">
+                    <thead>
+                        <tr class="bg-clay-100">
+                            <th class="px-4 py-2 text-left">文章名称</th>
+                            <th class="px-4 py-2 text-left">发布日期</th>
+                            <th class="px-4 py-2 text-left">链接</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">大家都通过什么方式获取用户需求？</td>
+                            <td class="px-4 py-3">2024/1/1</td>
+                            <td class="px-4 py-3"><a href="https://csjs.com/articleDetail/tag.topic/1528148849844482" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://csjs.com/articleDetail/tag.topic/1528148849844482</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">力扣开发者答辩会倒闭吗？</td>
+                            <td class="px-4 py-3">2022-02-06</td>
+                            <td class="px-4 py-3"><a href="https://csjs.com/articleDetail/tag.topic/284851525825523" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://csjs.com/articleDetail/tag.topic/284851525825523</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">AI 提出开发诉讼应该怎么做？Build another - nodal App</td>
+                            <td class="px-4 py-3">2022-06-06</td>
+                            <td class="px-4 py-3"><a href="https://csjs.com/articleDetail/tag.topic/284851525825523" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://csjs.com/articleDetail/tag.topic/284851525825523</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">我是如何通过搜索流量进行时代红利分析的？</td>
+                            <td class="px-4 py-3">2024-11-13</td>
+                            <td class="px-4 py-3"><a href="https://csjs.com/articleDetail/tag.topic/484851154851418" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://csjs.com/articleDetail/tag.topic/484851154851418</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">用了两个月的ChatGPT，我总结了7个AI应用场景</td>
+                            <td class="px-4 py-3">2024-11-05</td>
+                            <td class="px-4 py-3"><a href="https://csjs.com/articleDetail/tag.topic/512154273491514" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://csjs.com/articleDetail/tag.topic/512154273491514</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">周刊：打破百万美金，创业者为什么要做了？</td>
+                            <td class="px-4 py-3">2024-07-23</td>
+                            <td class="px-4 py-3"><a href="https://csjs.com/articleDetail/tag.topic/512264888125484" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://csjs.com/articleDetail/tag.topic/512264888125484</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-clay-50 transition-colors">
+                            <td class="px-4 py-3 font-medium">用AI自动化盈利：产品打包了7个实用的工具</td>
+                            <td class="px-4 py-3">2023-08-20</td>
+                            <td class="px-4 py-3"><a href="https://csjs.com/articleDetail/tag.topic/189845124845142" class="text-clay-600 hover:text-clay-800 hover:underline" target="_blank">https://csjs.com/articleDetail/tag.topic/189845124845142</a></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
     </main>
 
-    <footer class="container">
-        <p>© 2024 网站导航 - 版权所有 魏增宸</p>
-        <p>联系方式: <a href="mailto:weizenglong228@gmail.com">weizenglong228@gmail.com</a></p>
-        <p>本站收集整理互联网资源，帮助开发者和创业者快速定位有价值的工具</p>
+    <footer class="bg-clay-900 text-white py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">SEO工具导航网站</h3>
+                    <p class="text-gray-400">为SEO从业者提供便捷服务</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-clay-300 transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="hover:text-clay-300 transition-colors"><i class="fab fa-github text-xl"></i></a>
+                    <a href="#" class="hover:text-clay-300 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="hover:text-clay-300 transition-colors"><i class="fab fa-weixin text-xl"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-clay-700 pt-4 flex flex-col md:flex-row justify-between items-center">
+                <p>© 2024 魏增宸 - 保留所有权利</p>
+                <div class="mt-2 md:mt-0">
+                    <a href="#" class="text-sm text-gray-400 hover:text-white mr-4">隐私政策</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white mr-4">使用条款</a>
+                    <a href="mailto:weizenglong228@gmail.com" class="text-sm text-gray-400 hover:text-white">联系我们</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // 简单的搜索功能实现
+        document.querySelector('button.absolute').addEventListener('click', function() {
+            const searchTerm = document.querySelector('input[type="text"]').value.toLowerCase();
+            if (searchTerm) {
+                const allLinks = document.querySelectorAll('a');
+                const allTexts = document.querySelectorAll('td');
+                
+                let found = false;
+                
+                // 检查所有链接
+                allLinks.forEach(link => {
+                    if (link.textContent.toLowerCase().includes(searchTerm)) {
+                        link.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        found = true;
+                        return;
+                    }
+                });
+                
+                // 检查所有表格单元格
+                if (!found) {
+                    allTexts.forEach(cell => {
+                        if (cell.textContent.toLowerCase().includes(searchTerm)) {
+                            cell.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            found = true;
+                            return;
+                        }
+                    });
+                }
+                
+                if (!found) {
+                    alert('没有找到相关内容: ' + searchTerm);
+                }
+            }
+        });
+    </script>
 </body>
 </html> 
